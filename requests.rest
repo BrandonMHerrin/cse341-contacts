@@ -3,3 +3,11 @@ GET http://localhost:8080/contacts
 ###
 
 GET http://localhost:8080/contacts/67ce24b8aa44d8ad8545ead5
+
+###
+
+GET https://cse341-contacts-5u7a.onrender.com/contacts
+
+###
+
+GET https://cse341-contacts-5u7a.onrender.com/contacts/67ce24b8aa44d8ad8545ead5
