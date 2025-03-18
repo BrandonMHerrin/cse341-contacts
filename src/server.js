@@ -14,6 +14,7 @@ class Server {
     }
 
     #runLoaders() {
+        this.#app.use(express.json());
         new RouteLoader(this.#app);
         this.#app.use(errorHandler);
     }

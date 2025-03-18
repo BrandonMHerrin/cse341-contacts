@@ -30,6 +30,42 @@ class ContactsModel {
             throw new DatabaseError(error.message);
         }
     }
+    async insert(contact) {
+        try {
+            const collection = await getCollection();
+            const result = await collection.insertOne(contact);
+            if (!result.insertedId) {
+                throw new DatabaseError('There was an error creating the contact.')
+            }
+            return result.insertedId;
+        } catch (error) {
+            throw new DatabaseError(error.message);
+        }
+    }
+    async update(id, update) {
+        try {
+            const collection = await getCollection();
+            const result = await collection.updateOne({_id: id}, { $set: update});
+            if (result.matchedCount === 0) {
+                throw new DatabaseError('No contact found with the provided Id.')
+            }
+            return;
+        } catch (error) {
+            throw new DatabaseError(error.message);
+        }
+    }
+    async delete(id) {
+        try {
+            const collection = await getCollection();
+            const result = await collection.deleteOne({_id: id});
+            if (result.deletedCount !== 1) {
+                throw new DatabaseError('Failed to delete the contact.');
+            }
+            return;
+        } catch (error) {
+            throw new DatabaseError(error.message);
+        }
+    }
 }
 
 export default ContactsModel;

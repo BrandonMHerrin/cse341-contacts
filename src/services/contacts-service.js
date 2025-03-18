@@ -31,6 +31,33 @@ class ContactsService {
             throw new ServiceError(error.message);
         }
     }
+
+    async post(contact) {
+        try {
+            const contactId = await this.#contactsModel.insert(contact);
+            return { _id: contactId};
+        } catch (error) {
+            throw new ServiceError(error.message);
+        }
+    }
+
+    async put(id, update) {
+        try {
+            await this.#contactsModel.update(id, update);
+            return;
+        } catch (error) {
+            throw new ServiceError(error.message);
+        }
+    }
+
+    async delete(id) {
+        try {
+            await this.#contactsModel.delete(id);
+            return;
+        } catch (error) {
+            throw new ServiceError(error.message);
+        }
+    }
 }
 
 export default ContactsService;

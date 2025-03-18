@@ -6,6 +6,37 @@ GET http://localhost:8080/contacts/67ce24b8aa44d8ad8545ead5
 
 ###
 
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Chad",
+    "lastName": "Herrin",
+    "address": {
+        "street1": "123 main",
+        "street2": "apt1",
+        "city": "Salina",
+        "state": "Kansas"
+    },
+    "email": "test@example.com",
+    "phone": "0000000000"
+}
+
+###
+
+PUT http://localhost:8080/contacts/67ce24b8aa44d8ad8545ead5
+Content-Type: application/json
+
+{
+    "firstName": "Brandon"
+}
+
+###
+
+DELETE http://localhost:8080/contacts/67d7b4bcf820821f35d75308
+
+###
+
 GET https://cse341-contacts-5u7a.onrender.com/contacts
 
 ###
