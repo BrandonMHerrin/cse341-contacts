@@ -8,7 +8,7 @@
   "host": "cse341-contacts-5u7a.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/contacts/{id}": {
