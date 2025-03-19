@@ -10,16 +10,11 @@ POST http://localhost:8080/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Chad",
-    "lastName": "Herrin",
-    "address": {
-        "street1": "123 main",
-        "street2": "apt1",
-        "city": "Salina",
-        "state": "Kansas"
-    },
-    "email": "test@example.com",
-    "phone": "0000000000"
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "jdoe@example.com",
+  "favoriteColor": "blue",
+  "birthDate": "01/01/1990"
 }
 
 ###
@@ -28,7 +23,7 @@ PUT http://localhost:8080/contacts/67ce24b8aa44d8ad8545ead5
 Content-Type: application/json
 
 {
-    "firstName": "Brandon"
+    "firstName": "Johnny"
 }
 
 ###
@@ -49,16 +44,11 @@ POST https://cse341-contacts-5u7a.onrender.com/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Chad",
-    "lastName": "Herrin",
-    "address": {
-        "street1": "123 main",
-        "street2": "apt1",
-        "city": "Salina",
-        "state": "Kansas"
-    },
-    "email": "test@example.com",
-    "phone": "0000000000"
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "jdoe@example.com",
+  "favoriteColor": "blue",
+  "birthDate": "01/01/1990"
 }
 
 ###
@@ -67,7 +57,7 @@ PUT https://cse341-contacts-5u7a.onrender.com/contacts/67ce24b8aa44d8ad8545ead5
 Content-Type: application/json
 
 {
-    "firstName": "Brandn"
+    "firstName": "Johnny"
 }
 
 ###
