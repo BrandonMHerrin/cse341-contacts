@@ -42,3 +42,34 @@ GET https://cse341-contacts-5u7a.onrender.com/contacts
 ###
 
 GET https://cse341-contacts-5u7a.onrender.com/contacts/67ce24b8aa44d8ad8545ead5
+
+###
+
+POST https://cse341-contacts-5u7a.onrender.com/contacts
+Content-Type: application/json
+
+{
+    "firstName": "Chad",
+    "lastName": "Herrin",
+    "address": {
+        "street1": "123 main",
+        "street2": "apt1",
+        "city": "Salina",
+        "state": "Kansas"
+    },
+    "email": "test@example.com",
+    "phone": "0000000000"
+}
+
+###
+
+PUT https://cse341-contacts-5u7a.onrender.com/contacts/67ce24b8aa44d8ad8545ead5
+Content-Type: application/json
+
+{
+    "firstName": "Brandn"
+}
+
+###
+
+DELETE https://cse341-contacts-5u7a.onrender.com/contacts/67d8f17153ee20eda433c6e1
